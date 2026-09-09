@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPROFIT | Suplementación Deportiva Premium - Define Tu Proceso</title>
+  <meta name="description" content="Catálogo oficial de IPROFIT. Suplementación deportiva 100% original: Proteínas Whey, Creatinas Creapure, Pre-entrenos y Asesoría para definir tu proceso." />
+  
+  <!-- Google Fonts: Outfit & Syne -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#00f0ff',
+              blue: '#0284c7',
+              dark: '#07090e',
+              card: '#0f172a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos Personalizados IPROFIT -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-[#07090e] text-slate-100 min-h-screen selection:bg-cyan-500 selection:text-black">
+
+  <!-- =====================================================================
+       NAVBAR SUPERIOR GLASSMORPHISM
+       ===================================================================== -->
+  <header class="sticky top-0 z-40 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Logo IPROFIT -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="relative overflow-hidden rounded-xl border border-cyan-500/30 p-1 bg-black/80 shadow-md shadow-cyan-500/10 group-hover:border-cyan-400 transition">
+          <img 
+            src="images/logo_iprofit.jpeg" 
+            alt="IPROFIT - Define Tu Proceso" 
+            class="h-10 sm:h-12 w-auto object-contain"
+          />
+        </div>
+      </a>
+
+      <!-- Menú de Navegación (Desktop) -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#catalogo" class="hover:text-cyan-400 transition flex items-center gap-1.5">
+          <span>🔥</span> Catálogo
+        </a>
+        <a href="#beneficios" class="hover:text-cyan-400 transition flex items-center gap-1.5">
+          <span>⚡</span> Por qué IPROFIT
+        </a>
+        <a href="#preguntas" class="hover:text-cyan-400 transition flex items-center gap-1.5">
+          <span>❓</span> Preguntas Frecuentes
+        </a>
+      </nav>
+
+      <!-- Botones de Acción: Carrito y WhatsApp -->
+      <div class="flex items-center gap-3">
+        <!-- Botón Ver Pedido / Carrito -->
+        <button 
+          id="floating-cart-btn"
+          class="relative p-2.5 rounded-xl bg-slate-900/90 text-slate-200 hover:text-white border border-slate-700/80 hover:border-cyan-500/40 transition flex items-center justify-center"
+          title="Ver lista de pedido"
+        >
+          <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+          </svg>
+          <span 
+            id="cart-badge" 
+            class="hidden absolute -top-1.5 -right-1.5 bg-cyan-400 text-slate-950 text-[11px] font-black rounded-full h-5 w-5 flex items-center justify-center shadow-lg"
+          >
+            0
+          </span>
+        </button>
+
+        <!-- Botón Asesoría WhatsApp -->
+        <a 
+          href="https://wa.me/573001234567?text=Hola%20IPROFIT!%20Deseo%20recibir%20asesoría%20sobre%20los%20suplementos." 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-brand text-slate-950 font-bold text-xs hover:brightness-110 shadow-lg shadow-cyan-500/20 transition transform hover:-translate-y-0.5"
+        >
+          <span class="w-2 h-2 rounded-full bg-slate-950 animate-ping"></span>
+          <span>💬 Asesoría WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       HERO SECTION - BRANDING & ENERGÍA DEPORTIVA
+       ===================================================================== -->
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+    <!-- Luces ambientales de fondo -->
+    <div class="ambient-glow top-0 left-1/4 animate-glow-pulse"></div>
+    <div class="ambient-glow top-1/3 -right-20" style="background: radial-gradient(circle, rgba(2, 132, 199, 0.15) 0%, transparent 70%);"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Columna Izquierda: Texto de Marca -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Badge de Calidad -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/40 text-cyan-300 text-xs font-semibold backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span>OFICIAL &bull; SUPLEMENTACIÓN DEPORTIVA CERTIFICADA</span>
+          </div>
+
+          <!-- Headline Principal -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-display tracking-tight text-white leading-tight">
+            POTENCIA TU FÍSICO.<br/>
+            <span class="text-gradient-cyan text-glow-cyan">DEFINE TU PROCESO.</span>
+          </h1>
+
+          <!-- Subtexto -->
+          <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            Las mejores marcas de <strong class="text-white">Proteínas, Creatinas y Pre-Entrenos</strong> 100% originales con entrega rápida y asesoría gratuita para llevar tu entrenamiento al máximo nivel.
+          </p>
+
+          <!-- Píldoras de Confianza -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2 text-xs text-slate-300">
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800">
+              <span class="text-cyan-400">✓</span> 100% Originales & Sellados
+            </div>
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800">
+              <span class="text-cyan-400">⚡</span> Envíos Seguros a Todo el País
+            </div>
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800">
+              <span class="text-cyan-400">💬</span> Pedidos Fáciles por WhatsApp
+            </div>
+          </div>
+
+          <!-- Call to Actions -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <a 
+              href="#catalogo" 
+              class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-brand text-slate-950 font-extrabold text-sm text-center shadow-xl shadow-cyan-500/25 hover:brightness-110 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
+            >
+              <span>🔥 Explorar Catálogo</span>
+            </a>
+            
+            <a 
+              href="https://wa.me/573001234567?text=¡Hola%20IPROFIT!%20Quiero%20asesoría%20para%20elegir%20el%20mejor%20suplemento%20según%20mi%20meta." 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="w-full sm:w-auto px-6 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 text-sm font-bold text-center transition flex items-center justify-center gap-2"
+            >
+              <span>💬 Hablar con un Asesor</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Columna Derecha: Showcase Visual de Productos Destacados -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-md">
+            
+            <!-- Tarjeta Flotante Hero 1 (Optimum Nutrition) -->
+            <div class="glass-panel p-5 rounded-3xl border border-cyan-500/30 relative z-10 box-glow-cyan">
+              <div class="flex items-center justify-between text-xs text-cyan-400 font-bold mb-3">
+                <span>⭐ MÁS RECOMENDADO</span>
+                <span class="text-slate-400">Gold Standard 5 LB</span>
+              </div>
+              <div class="bg-gradient-to-b from-slate-900 to-black rounded-2xl p-4 flex items-center justify-center h-56 mb-4">
+                <img 
+                  src="images/producto-1.jpeg" 
+                  alt="Gold Standard Whey Protein" 
+                  class="max-h-52 object-contain filter drop-shadow-[0_15px_20px_rgba(0,0,0,0.9)]"
+                />
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <h4 class="text-sm font-bold text-white">Optimum Nutrition Whey</h4>
+                  <p class="text-xs text-slate-400">24g Proteína Aislada &bull; 73 Servicios</p>
+                </div>
+                <button 
+                  onclick="window.openProductDetail('on-gold-standard-whey-5lb')"
+                  class="px-3.5 py-2 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 text-xs font-bold border border-cyan-500/40 transition"
+                >
+                  Ver Info
+                </button>
+              </div>
+            </div>
+
+            <!-- Mini Badge Flotante 2 (Nitro-Tech) -->
+            <div class="absolute -bottom-6 -left-6 z-20 glass-panel p-3.5 rounded-2xl border border-slate-700 flex items-center gap-3 shadow-2xl backdrop-blur-xl hidden sm:flex">
+              <img src="images/producto-2.jpeg" alt="MuscleTech Nitro-Tech" class="w-12 h-12 object-contain bg-slate-950 rounded-lg p-1" />
+              <div>
+                <span class="text-[10px] font-extrabold text-cyan-400 uppercase">Fuerza Pura</span>
+                <p class="text-xs font-bold text-white">Nitro-Tech 30g + Creatina</p>
+                <span class="text-[11px] text-emerald-400 font-bold">Disponible</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       CINTA DE BENEFICIOS / TRUST STRIP
+       ===================================================================== -->
+  <section class="border-y border-slate-800/80 bg-slate-950/60 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        
+        <div class="flex flex-col items-center">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-lg mb-2 border border-cyan-500/20">
+            🛡️
+          </div>
+          <h4 class="text-xs sm:text-sm font-bold text-white">100% Auténticos</h4>
+          <p class="text-[11px] text-slate-400 mt-0.5">Sellos y lotes de fábrica</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-lg mb-2 border border-cyan-500/20">
+            💬
+          </div>
+          <h4 class="text-xs sm:text-sm font-bold text-white">Atención por WhatsApp</h4>
+          <p class="text-[11px] text-slate-400 mt-0.5">Respuesta inmediata</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-lg mb-2 border border-cyan-500/20">
+            🚀
+          </div>
+          <h4 class="text-xs sm:text-sm font-bold text-white">Envíos Rápidos</h4>
+          <p class="text-[11px] text-slate-400 mt-0.5">Cobertura nacional garantizada</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-lg mb-2 border border-cyan-500/20">
+            💳
+          </div>
+          <h4 class="text-xs sm:text-sm font-bold text-white">Pagos Confiables</h4>
+          <p class="text-[11px] text-slate-400 mt-0.5">Nequi, Daviplata y Bancos</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECCIÓN PRINCIPAL: CATÁLOGO DE PRODUCTOS INTERACTIVO
+       ===================================================================== -->
+  <section id="catalogo" class="py-16 md:py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Título de Sección -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Catálogo Oficial</span>
+          <h2 class="text-3xl sm:text-4xl font-black font-display text-white mt-1">
+            EXPLORA NUESTRA LÍNEA
+          </h2>
+          <p class="text-sm text-slate-400 mt-1">
+            Selecciona tu suplemento favorito o haz tu pedido personalizado directamente a nuestro WhatsApp.
+          </p>
+        </div>
+        <div class="text-xs text-slate-400" id="products-count">
+          Cargando catálogo...
+        </div>
+      </div>
+
+      <!-- Barra de Filtros y Búsqueda -->
+      <div class="space-y-4 mb-8">
+        
+        <!-- Pestañas de Categoría con Scroll Horizontal en móvil -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="category-tabs">
+          <!-- Renderizado dinámicamente desde app.js -->
+        </div>
+
+        <!-- Buscador en tiempo real -->
+        <div class="relative max-w-md">
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Buscar por nombre, marca o ingrediente (ej: Whey, Creatina)..."
+            class="w-full bg-slate-900/90 border border-slate-800 rounded-xl px-4 py-3 pl-11 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500/60 focus:ring-1 focus:ring-cyan-500/50 transition"
+          />
+          <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500">
+            🔍
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Grid de Productos -->
+      <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Renderizado dinámicamente desde app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECCIÓN: POR QUÉ ELEGIR IPROFIT
+       ===================================================================== -->
+  <section id="beneficios" class="py-16 bg-slate-950/70 border-t border-slate-800/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Nuestra Filosofía</span>
+        <h2 class="text-3xl sm:text-4xl font-black font-display text-white mt-1">
+          ¿POR QUÉ ELEGIR IPROFIT?
+        </h2>
+        <p class="text-sm text-slate-400 mt-2">
+          No solo vendemos suplementos; te acompañamos con asesoría experta para que cada repetición y cada gramo cuenten.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-cyan-500/40 transition">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-2xl mb-4">
+            🔬
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Cero Imitaciones</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Trabajamos únicamente con distribuidores oficiales e importaciones directas. Todos nuestros tarros vienen con sus precintos de seguridad intactos y fechas de vencimiento amplias.
+          </p>
+        </div>
+
+        <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-cyan-500/40 transition">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-2xl mb-4">
+            🎯
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Asesoría Según Tu Meta</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            ¿Buscas ganar masa muscular limpia, perder grasa o mejorar tu fuerza en sentadilla? Escríbenos por WhatsApp y te orientamos sin costo adicional para elegir el producto exacto.
+          </p>
+        </div>
+
+        <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-cyan-500/40 transition">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-2xl mb-4">
+            📦
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Despacho Inmediato</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Empacamos tu pedido con protección de burbuja de alta resistencia para que llegue en perfecto estado a la puerta de tu casa o gimnasio.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       PREGUNTAS FRECUENTES (FAQ)
+       ===================================================================== -->
+  <section id="preguntas" class="py-16 md:py-20 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest">Dudas Comunes</span>
+        <h2 class="text-3xl font-black font-display text-white mt-1">
+          PREGUNTAS FRECUENTES
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="glass-panel rounded-2xl border border-slate-800 p-5 group transition" open>
+          <summary class="font-bold text-white text-sm sm:text-base cursor-pointer flex items-center justify-between">
+            <span>¿Cómo se realiza la compra en el catálogo?</span>
+            <span class="text-cyan-400 text-lg group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-slate-400 mt-3 leading-relaxed">
+            ¡Es muy fácil! Puedes dar clic en <strong>"Comprar por WhatsApp"</strong> en cualquiera de los productos o agregarlos a tu lista de pedido. Al enviar el mensaje, uno de nuestros asesores te confirmará el costo total, los datos de envío y los medios de pago disponibles.
+          </p>
+        </details>
+
+        <details class="glass-panel rounded-2xl border border-slate-800 p-5 group transition">
+          <summary class="font-bold text-white text-sm sm:text-base cursor-pointer flex items-center justify-between">
+            <span>¿Qué medios de pago reciben?</span>
+            <span class="text-cyan-400 text-lg group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-slate-400 mt-3 leading-relaxed">
+            Recibimos transferencias bancarias (Bancolombia, Davivienda), Nequi, Daviplata y en ciudades seleccionadas contamos con opción de pago contra entrega.
+          </p>
+        </details>
+
+        <details class="glass-panel rounded-2xl border border-slate-800 p-5 group transition">
+          <summary class="font-bold text-white text-sm sm:text-base cursor-pointer flex items-center justify-between">
+            <span>¿Cuánto demora en llegar mi pedido?</span>
+            <span class="text-cyan-400 text-lg group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-slate-400 mt-3 leading-relaxed">
+            Los envíos locales se entregan el mismo día o en 24 horas. Para envíos a nivel nacional, el tiempo estimado de entrega por transportadora certificada es de 2 a 4 días hábiles.
+          </p>
+        </details>
+
+        <details class="glass-panel rounded-2xl border border-slate-800 p-5 group transition">
+          <summary class="font-bold text-white text-sm sm:text-base cursor-pointer flex items-center justify-between">
+            <span>¿Cómo sé cuál es el suplemento ideal para mí?</span>
+            <span class="text-cyan-400 text-lg group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-xs sm:text-sm text-slate-400 mt-3 leading-relaxed">
+            Contamos con atención personalizada. Solo toca el botón de WhatsApp y cuéntanos tu edad, peso, rutina y tu objetivo (ejemplo: aumento de masa muscular o pérdida de grasa). Con gusto te asesoramos de forma gratuita.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       BANNER DE LLAMADO A LA ACCIÓN (CTA FINAL)
+       ===================================================================== -->
+  <section class="py-16 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative rounded-3xl p-8 sm:p-12 glass-panel border border-cyan-500/40 text-center overflow-hidden box-glow-cyan">
+        
+        <div class="relative z-10 max-w-2xl mx-auto space-y-4">
+          <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-bold uppercase tracking-wider">
+            ¿Listo para llevar tu físico al siguiente nivel?
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black font-display text-white">
+            DEFINE TU PROCESO CON <span class="text-gradient-cyan">IPROFIT</span>
+          </h2>
+          <p class="text-sm text-slate-300">
+            Escríbenos ahora mismo y recibe asesoría directa, cotización de envíos y promociones especiales vigentes.
+          </p>
+          <div class="pt-4">
+            <a 
+              href="https://wa.me/573001234567?text=¡Hola%20IPROFIT!%20Quiero%20hacer%20un%20pedido%20del%20catálogo." 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-brand text-slate-950 font-extrabold text-sm hover:brightness-110 shadow-xl shadow-cyan-500/30 transition transform hover:scale-105"
+            >
+              <span>📲 Iniciar Pedido por WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       FOOTER
+       ===================================================================== -->
+  <footer class="border-t border-slate-800 bg-black/90 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- Logo y Slogan -->
+        <div class="flex items-center gap-3">
+          <img src="images/logo_iprofit.jpeg" alt="IPROFIT" class="h-8 w-auto rounded" />
+          <div>
+            <span class="font-extrabold text-white tracking-wider">IPROFIT</span>
+            <p class="text-[11px] text-cyan-400 font-semibold">DEFINE TU PROCESO</p>
+          </div>
+        </div>
+
+        <!-- Enlaces rápidos -->
+        <div class="flex items-center gap-6">
+          <a href="#catalogo" class="hover:text-cyan-400 transition">Catálogo</a>
+          <a href="#beneficios" class="hover:text-cyan-400 transition">Garantía</a>
+          <a href="#preguntas" class="hover:text-cyan-400 transition">Preguntas</a>
+          <a href="https://instagram.com/iprofit" target="_blank" class="hover:text-cyan-400 transition">Instagram</a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center md:text-right text-slate-500">
+          <p>&copy; 2026 IPROFIT. Todos los derechos reservados.</p>
+          <p class="text-[10px] mt-1 text-slate-600">Catálogo web optimizado para GitHub Pages.</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       MODAL DE DETALLE RÁPIDO DE PRODUCTO
+       ===================================================================== -->
+  <div 
+    id="product-modal" 
+    class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-md items-center justify-center p-4 transition-all"
+  >
+    <div 
+      id="modal-content" 
+      class="glass-panel rounded-3xl max-w-3xl w-full border border-slate-700/80 overflow-hidden max-h-[90vh] overflow-y-auto"
+    >
+      <!-- Se inyecta dinámicamente desde app.js -->
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       DRAWER / SIDEBAR: LISTA DE PEDIDO (COTIZADOR WHATSAPP)
+       ===================================================================== -->
+  <aside 
+    id="cart-drawer" 
+    class="fixed top-0 right-0 h-full w-full sm:w-96 bg-slate-950 border-l border-slate-800 z-50 transform translate-x-full transition-transform duration-300 flex flex-col shadow-2xl"
+  >
+    <!-- Cabecera del Drawer -->
+    <div class="p-5 border-b border-slate-800 flex items-center justify-between bg-slate-900/80">
+      <div class="flex items-center gap-2">
+        <span class="text-cyan-400 text-lg">🛒</span>
+        <h3 class="font-bold text-white text-base">Tu Lista de Pedido</h3>
+      </div>
+      <button 
+        onclick="window.closeCart()" 
+        class="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition"
+      >
+        ✕
+      </button>
+    </div>
+
+    <!-- Contenido de Productos en el Pedido -->
+    <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-3">
+      <!-- Se inyecta dinámicamente desde app.js -->
+    </div>
+
+    <!-- Footer del Drawer: Total y Checkout WhatsApp -->
+    <div class="p-5 border-t border-slate-800 bg-slate-900/60 space-y-3">
+      <div class="flex items-center justify-between text-sm">
+        <span class="text-slate-400">Total Estimado:</span>
+        <span id="cart-total" class="text-xl font-black text-cyan-400 font-display">$ 0</span>
+      </div>
+      <p class="text-[11px] text-slate-500">
+        El costo de envío se confirmará por WhatsApp según tu ciudad o municipio.
+      </p>
+      <a 
+        id="cart-checkout-btn" 
+        href="#" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="w-full py-3.5 px-4 rounded-xl bg-gradient-brand text-slate-950 font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/25 transition hover:brightness-110"
+      >
+        <span>📲 Enviar Pedido a WhatsApp</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Script Principal de la Aplicación -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
