@@ -10,10 +10,10 @@
   <link rel="icon" type="image/jpeg" href="images/logo_iprofit.jpeg" />
   <link rel="apple-touch-icon" href="images/logo_iprofit.jpeg" />
 
-  <!-- Google Fonts: Outfit & Syne -->
+  <!-- Google Fonts Oficiales de catalogo_2.jpeg: Chakra Petch, Michroma, Barlow Condensed & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:ital,wght@0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800;1,900&family=Chakra+Petch:ital,wght@0,600;0,700;1,700;1,900&family=Michroma&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN con configuración de darkMode 'class' -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -144,8 +144,8 @@
             <span>CATÁLOGO OFICIAL &bull; SUPLEMENTACIÓN 100% ORIGINAL</span>
           </div>
 
-          <!-- Headline Principal -->
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-display tracking-tight text-slate-950 dark:text-white leading-tight">
+          <!-- Headline Principal con Tipografía Atlética de catalogo_2 -->
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-athletic tracking-tight text-slate-950 dark:text-white leading-tight">
             POTENCIA TU FÍSICO.<br/>
             <span class="text-gradient-cyan text-glow-cyan">DEFINE TU PROCESO.</span>
           </h1>
@@ -172,7 +172,7 @@
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-3">
             <a 
               href="#catalogo" 
-              class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-brand text-slate-950 font-extrabold text-xs sm:text-sm text-center shadow-xl shadow-cyan-500/25 active:scale-95 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
+              class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-brand text-slate-950 font-extrabold text-xs sm:text-sm text-center shadow-xl shadow-cyan-500/25 active:scale-95 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2 font-athletic"
             >
               <span>🔥 Ver Catálogo Completo</span>
             </a>
@@ -196,8 +196,8 @@
             <!-- Tarjeta Central Hero (Gold Standard 100% Whey) -->
             <div class="glass-panel p-4 sm:p-5 rounded-3xl border border-amber-500/40 relative z-10 shadow-[0_0_30px_rgba(245,158,11,0.2)]">
               <div class="flex items-center justify-between text-[11px] text-amber-600 dark:text-amber-400 font-bold mb-2">
-                <span>⭐ TOP VENTAS MUNDIAL</span>
-                <span class="text-slate-950 dark:text-white font-display font-black text-sm">$ 400.000 COL$</span>
+                <span class="font-athletic">⭐ TOP VENTAS MUNDIAL</span>
+                <span class="text-slate-950 dark:text-white font-price font-black text-base sm:text-lg">$ 400.000 (COL$)</span>
               </div>
               <div class="bg-gradient-to-b from-slate-100 to-slate-200/60 dark:from-slate-900 dark:to-black rounded-2xl p-3 flex items-center justify-center h-48 sm:h-52 mb-3">
                 <img 
@@ -208,12 +208,12 @@
               </div>
               <div class="flex items-center justify-between">
                 <div>
-                  <h4 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Optimum Nutrition Whey 5LB</h4>
+                  <h4 class="text-xs sm:text-sm font-black font-product-title uppercase text-slate-900 dark:text-white">Optimum Nutrition Whey 5LB</h4>
                   <p class="text-[11px] text-slate-500 dark:text-slate-400">24g Proteína &bull; 5.5g BCAAs &bull; 73 Servs</p>
                 </div>
                 <button 
                   onclick="window.openProductDetail('on-gold-standard-whey-5lb')"
-                  class="px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-700 dark:text-amber-300 text-xs font-bold border border-amber-500/40 transition"
+                  class="px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-700 dark:text-amber-300 text-xs font-bold border border-amber-500/40 transition font-athletic"
                 >
                   Ficha
                 </button>
@@ -224,8 +224,8 @@
             <div class="absolute -bottom-5 -left-4 z-20 glass-panel p-2.5 sm:p-3 rounded-2xl border border-red-500/40 flex items-center gap-2.5 shadow-xl backdrop-blur-xl hidden sm:flex">
               <img src="images/producto-2.jpeg" alt="MuscleTech Nitro-Tech" class="w-11 h-11 object-contain bg-white dark:bg-black rounded-lg p-1 border border-slate-200 dark:border-transparent" />
               <div>
-                <span class="text-[10px] font-black text-red-600 dark:text-red-400 uppercase">Nitro-Tech</span>
-                <p class="text-xs font-black text-slate-900 dark:text-white">$ 220.000 COL$</p>
+                <span class="text-[10px] font-black text-red-600 dark:text-red-400 uppercase font-athletic">Nitro-Tech</span>
+                <p class="text-xs font-black text-slate-900 dark:text-white font-price">$ 220.000 (COL$)</p>
                 <span class="text-[10px] text-slate-500 dark:text-slate-400">30g Proteína + 3g Creatina</span>
               </div>
             </div>
@@ -234,8 +234,8 @@
             <div class="absolute -top-5 -right-3 z-20 glass-panel p-2.5 sm:p-3 rounded-2xl border border-cyan-500/40 flex items-center gap-2.5 shadow-xl backdrop-blur-xl hidden sm:flex">
               <img src="images/producto-3.jpeg" alt="Dymatize ISO100" class="w-11 h-11 object-contain bg-white dark:bg-black rounded-lg p-1 border border-slate-200 dark:border-transparent" />
               <div>
-                <span class="text-[10px] font-black text-cyan-600 dark:text-cyan-400 uppercase">ISO100 Hydrolyzed</span>
-                <p class="text-xs font-black text-slate-900 dark:text-white">$ 240.000 COL$</p>
+                <span class="text-[10px] font-black text-cyan-600 dark:text-cyan-400 uppercase font-athletic">ISO100 Hydrolyzed</span>
+                <p class="text-xs font-black text-slate-900 dark:text-white font-price">$ 240.000 (COL$)</p>
                 <span class="text-[10px] text-slate-500 dark:text-slate-400">25g Aislada Pura</span>
               </div>
             </div>
@@ -493,7 +493,7 @@
           </div>
           <div class="flex items-center gap-2 mt-1">
             <span class="w-8 h-[2px] bg-cyan-500"></span>
-            <span class="text-[11px] font-bold text-slate-900 dark:text-white tracking-widest">DEFINE TU PROCESO</span>
+            <span class="text-[10px] sm:text-[11px] font-black text-slate-900 dark:text-white font-tagline-tracked">DEFINE TU PROCESO</span>
             <span class="w-8 h-[2px] bg-cyan-500"></span>
           </div>
         </div>

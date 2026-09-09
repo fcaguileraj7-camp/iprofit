@@ -229,8 +229,8 @@ function renderProducts() {
               <span class="text-slate-500 dark:text-slate-400 text-[11px] font-medium">${product.weight}</span>
             </div>
 
-            <!-- Título del Producto -->
-            <h3 class="font-bold text-slate-900 dark:text-white text-sm sm:text-base leading-snug group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors line-clamp-2 mb-1.5">
+            <!-- Título del Producto Estilo catalogo_2 -->
+            <h3 class="font-product-title font-black uppercase text-slate-900 dark:text-white text-sm sm:text-base leading-tight group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors line-clamp-2 mb-1.5">
               ${product.name}
             </h3>
 
@@ -247,16 +247,16 @@ function renderProducts() {
 
           <!-- Precios y Acciones -->
           <div class="pt-3 border-t border-slate-100 dark:border-slate-800/80">
-            <!-- Bloque de Precio Oficial -->
+            <!-- Bloque de Precio Oficial Tipo catalogo_2 -->
             <div class="flex items-baseline justify-between mb-3">
               <div>
-                <span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider block">PRECIO:</span>
-                <span class="text-xl sm:text-2xl font-black text-slate-950 dark:text-white font-display tracking-tight">
+                <span class="text-[10px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-wider block font-athletic">PRECIO:</span>
+                <span class="text-2xl sm:text-3xl font-black text-slate-950 dark:text-white font-price tracking-tight leading-none">
                   ${formatPrice(product.price)}
                 </span>
-                <span class="text-[11px] text-cyan-600 dark:text-cyan-400 font-bold ml-1">(COL$)</span>
+                <span class="text-xs text-cyan-600 dark:text-cyan-400 font-extrabold ml-1 font-athletic">(COL$)</span>
                 ${product.originalPrice ? `
-                  <span class="text-xs text-slate-400 dark:text-slate-500 line-through ml-2">
+                  <span class="text-xs text-slate-400 dark:text-slate-500 line-through ml-2 font-price">
                     ${formatPrice(product.originalPrice)}
                   </span>
                 ` : ''}
@@ -395,15 +395,15 @@ window.openProductDetail = function(productId) {
             <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">${product.weight}</span>
           </div>
 
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight">${product.name}</h2>
+          <h2 class="text-xl sm:text-2xl font-black font-product-title uppercase text-slate-900 dark:text-white mb-2 leading-tight">${product.name}</h2>
           
-          <!-- Bloque de Precio -->
+          <!-- Bloque de Precio Oficial Tipo catalogo_2 -->
           <div class="flex items-baseline gap-2 mb-3 bg-slate-100 dark:bg-slate-900/60 p-2.5 rounded-xl border border-slate-200 dark:border-slate-800">
-            <span class="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold">PRECIO:</span>
-            <span class="text-2xl font-black text-slate-950 dark:text-white font-display">${formatPrice(product.price)}</span>
-            <span class="text-xs text-cyan-600 dark:text-cyan-400 font-bold">(COL$)</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400 uppercase font-bold font-athletic">PRECIO:</span>
+            <span class="text-3xl font-black text-slate-950 dark:text-white font-price tracking-tight">${formatPrice(product.price)}</span>
+            <span class="text-xs text-cyan-600 dark:text-cyan-400 font-extrabold font-athletic">(COL$)</span>
             ${product.originalPrice ? `
-              <span class="text-xs text-slate-400 dark:text-slate-500 line-through ml-2">${formatPrice(product.originalPrice)}</span>
+              <span class="text-sm text-slate-400 dark:text-slate-500 line-through ml-2 font-price">${formatPrice(product.originalPrice)}</span>
             ` : ''}
           </div>
 
