@@ -1,10 +1,28 @@
 /* ==========================================================================
-   IPROFIT - Estilos Personalizados de Marca, Branding & Mobile First
-   Paleta: Dark Obsidian (#07090e), Cyan Neón (#00f0ff), Plata Metálico
+   IPROFIT - Estilos Personalizados de Marca, Branding & Dark / Light Mode
+   Paleta: Dark Obsidian (#07090e) / Light Platinum (#f8fafc), Cyan Neón (#00f0ff)
    Inspirado en catalogo_2.jpeg y la identidad deportiva de élite
    ========================================================================== */
 
+/* Tema Claro (Light Mode) */
 :root {
+  --bg-main: #f8fafc;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-card-hover: rgba(255, 255, 255, 1);
+  --accent-cyan: #00b4d8;
+  --accent-cyan-rgb: 0, 180, 216;
+  --accent-blue: #0284c7;
+  --accent-glow: rgba(0, 180, 216, 0.2);
+  --accent-gold: #d97706;
+  --accent-red: #dc2626;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-active: rgba(2, 132, 199, 0.4);
+}
+
+/* Tema Oscuro (Dark Mode por Defecto) */
+.dark {
   --bg-main: #07090e;
   --bg-card: rgba(15, 23, 42, 0.75);
   --bg-card-hover: rgba(24, 34, 58, 0.9);
@@ -30,6 +48,7 @@ body {
   font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
   padding-bottom: 76px; /* Espacio para la barra de navegación móvil */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @media (min-width: 768px) {
@@ -67,6 +86,11 @@ body {
   border-color: rgba(0, 240, 255, 0.6);
 }
 
+/* Sombra suave para modo claro */
+.light .box-glow-cyan {
+  box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.15), 0 8px 10px -6px rgba(2, 132, 199, 0.05);
+}
+
 /* Acentos de producto inspirados en catalogo_2 */
 .theme-amber {
   --product-accent: #f59e0b;
@@ -92,12 +116,24 @@ body {
 }
 
 .text-gradient-cyan {
+  background: linear-gradient(90deg, #0284c7 0%, #00b4d8 50%, #0077b6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .text-gradient-cyan {
   background: linear-gradient(90deg, #ffffff 0%, #00f0ff 50%, #38bdf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-silver {
+  background: linear-gradient(180deg, #1e293b 0%, #475569 50%, #64748b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .text-gradient-silver {
   background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -109,22 +145,35 @@ body {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-subtle);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .glass-nav {
-  background: rgba(7, 9, 14, 0.9);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dark .glass-nav {
+  background: rgba(7, 9, 14, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Barra de navegación inferior para celular */
 .mobile-bottom-bar {
-  background: rgba(10, 14, 23, 0.95);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding-bottom: env(safe-area-inset-bottom, 8px);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dark .mobile-bottom-bar {
+  background: rgba(10, 14, 23, 0.96);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Glow de fondo decorativo */
@@ -132,11 +181,15 @@ body {
   position: absolute;
   width: 450px;
   height: 450px;
-  background: radial-gradient(circle, rgba(0, 240, 255, 0.12) 0%, rgba(2, 132, 199, 0.05) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.12) 0%, rgba(2, 132, 199, 0.04) 50%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   filter: blur(50px);
   z-index: 0;
+}
+
+.dark .ambient-glow {
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.12) 0%, rgba(2, 132, 199, 0.05) 50%, transparent 70%);
 }
 
 /* Animaciones sutiles */
@@ -149,7 +202,7 @@ body {
   animation: pulseGlow 4s infinite ease-in-out;
 }
 
-/* Micro-píldoras circulares de características (como en catalogo_2) */
+/* Micro-píldoras de características (como en catalogo_2) */
 .feature-badge-chip {
   display: inline-flex;
   align-items: center;
@@ -158,15 +211,20 @@ body {
   border-radius: 8px;
   font-size: 11px;
   font-weight: 600;
+  background: rgba(241, 245, 249, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.dark .feature-badge-chip {
   background: rgba(15, 23, 42, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: #e2e8f0;
-  transition: all 0.2s ease;
 }
 
 .feature-badge-chip:hover {
   border-color: var(--accent-cyan);
-  background: rgba(24, 34, 58, 0.95);
 }
 
 /* Tarjeta de Producto */
@@ -203,11 +261,14 @@ body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #07090e;
+  background: var(--bg-main);
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #cbd5e1;
   border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #1e293b;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #00f0ff;
