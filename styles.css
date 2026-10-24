@@ -167,6 +167,20 @@ html, body {
   transform: scale(0.97);
 }
 
+.header-logo-dark,
+.header-logo-light {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+@media (min-width: 480px) {
+  .header-logo-dark,
+  .header-logo-light {
+    height: 32px;
+  }
+}
+
 html.dark .header-logo-dark {
   display: block;
 }
