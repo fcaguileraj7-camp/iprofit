@@ -1,288 +1,694 @@
 /* ==========================================================================
-   IPROFIT - Estilos Personalizados de Marca, Branding & Dark / Light Mode
-   Tipografía Oficial de catalogo_2.jpeg:
-   - Titulares Atléticos: 'Chakra Petch' & 'Michroma' (Italic, 900 Black, Extended)
-   - Precios de Alto Impacto: 'Barlow Condensed' (Bold, Tall, Condensed)
-   - Textos de Lectura Limpia: 'Outfit' & 'Plus Jakarta Sans'
+   IPROFIT - Mobile-First App Design System (UI/UX Celulares)
+   Ecosistema de STICKERS die-cut recortados sin fondo, inspirados en 'clientes'
+   - Modo Claro y Modo Oscuro dinámico con persistencia local
+   - Botones vectoriales SVG de alta definición (cero emojis pixelados)
+   - Sin traslapes: Jerarquía visual limpia y separación total de capas
+   - Colores vivos de alta energía: Cyan Neón, Amber Gold, Crimson Red, Volt Lime
    ========================================================================== */
 
-/* Tema Claro (Light Mode) */
-:root {
-  --bg-main: #f8fafc;
-  --bg-card: rgba(255, 255, 255, 0.92);
-  --bg-card-hover: rgba(255, 255, 255, 1);
-  --accent-cyan: #00b4d8;
-  --accent-cyan-rgb: 0, 180, 216;
-  --accent-blue: #0284c7;
-  --accent-glow: rgba(0, 180, 216, 0.2);
-  --accent-gold: #d97706;
-  --accent-red: #dc2626;
-  --text-main: #0f172a;
+:root,
+html.dark {
+  --page-bg: #030407;
+  --app-bg: #07090e;
+  --app-card-bg: #0d121c;
+  --card-header-bg: rgba(0, 0, 0, 0.45);
+  --card-body-bg: linear-gradient(to bottom, #0d121c, #07090e);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
   --text-muted: #64748b;
-  --border-subtle: rgba(0, 0, 0, 0.08);
-  --border-active: rgba(2, 132, 199, 0.4);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --bar-bg: rgba(7, 9, 14, 0.94);
+  --dock-bg: rgba(10, 14, 23, 0.95);
+  --stage-bg: #080b11;
+  --speed-line-color: rgba(255, 255, 255, 0.035);
+  --btn-secondary-bg: rgba(255, 255, 255, 0.08);
+  --btn-secondary-border: rgba(255, 255, 255, 0.12);
+  --btn-secondary-text: #f1f5f9;
+  --btn-secondary-hover: rgba(255, 255, 255, 0.16);
+  --accordion-bg: rgba(255, 255, 255, 0.04);
+  --accordion-inner-bg: rgba(0, 0, 0, 0.4);
+  --spec-pill-bg: rgba(255, 255, 255, 0.05);
+  --spec-pill-border: rgba(255, 255, 255, 0.1);
+  --spec-pill-text: #e2e8f0;
+  --info-bar-bg: rgba(0, 0, 0, 0.4);
+  --search-input-bg: #090d16;
+  --drawer-bg: #07090e;
+  --shadow-shell: 0 0 70px rgba(0, 240, 255, 0.15), 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+  
+  --cyan-neon: #00f0ff;
+  --amber-gold: #f59e0b;
+  --crimson-red: #ef4444;
+  --volt-lime: #22c55e;
 }
 
-/* Tema Oscuro (Dark Mode por Defecto) */
-.dark {
-  --bg-main: #07090e;
-  --bg-card: rgba(15, 23, 42, 0.75);
-  --bg-card-hover: rgba(24, 34, 58, 0.9);
-  --accent-cyan: #00f0ff;
-  --accent-cyan-rgb: 0, 240, 255;
-  --accent-blue: #0284c7;
-  --accent-glow: rgba(0, 240, 255, 0.25);
-  --accent-gold: #f59e0b;
-  --accent-red: #ef4444;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-active: rgba(0, 240, 255, 0.4);
+html.light {
+  --page-bg: #e2e8f0;
+  --app-bg: #ffffff;
+  --app-card-bg: #ffffff;
+  --card-header-bg: #f8fafc;
+  --card-body-bg: #ffffff;
+  --text-primary: #090d16;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-card: rgba(0, 0, 0, 0.08);
+  --bar-bg: rgba(255, 255, 255, 0.96);
+  --dock-bg: rgba(255, 255, 255, 0.97);
+  --stage-bg: #f1f5f9;
+  --speed-line-color: rgba(0, 0, 0, 0.035);
+  --btn-secondary-bg: #f1f5f9;
+  --btn-secondary-border: #e2e8f0;
+  --btn-secondary-text: #1e293b;
+  --btn-secondary-hover: #e2e8f0;
+  --accordion-bg: #f8fafc;
+  --accordion-inner-bg: #f1f5f9;
+  --spec-pill-bg: #f1f5f9;
+  --spec-pill-border: #e2e8f0;
+  --spec-pill-text: #334155;
+  --info-bar-bg: #f8fafc;
+  --search-input-bg: #f8fafc;
+  --drawer-bg: #ffffff;
+  --shadow-shell: 0 0 45px rgba(0, 0, 0, 0.08), 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+  
+  --cyan-neon: #0284c7;
+  --amber-gold: #d97706;
+  --crimson-red: #dc2626;
+  --volt-lime: #16a34a;
 }
 
 * {
   -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
 }
 
-body {
-  background-color: var(--bg-main);
-  color: var(--text-main);
+html, body {
+  background-color: var(--page-bg);
+  color: var(--text-primary);
   font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
-  padding-bottom: 76px; /* Espacio para barra inferior en móvil */
-  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-@media (min-width: 768px) {
-  body {
-    padding-bottom: 0;
+/* ==========================================================================
+   CONTENEDOR MOBILE-FIRST (APP SHELL)
+   ========================================================================== */
+#mobile-app-shell {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--app-bg);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-shell);
+  border-left: 1px solid var(--border-subtle);
+  border-right: 1px solid var(--border-subtle);
+  padding-bottom: 88px;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (max-width: 480px) {
+  #mobile-app-shell {
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
   }
 }
 
 /* ==========================================================================
-   TIPOGRAFÍAS OFICIALES DE catalogo_2.jpeg
+   TIPOGRAFÍAS DE ALTO RENDIMIENTO
    ========================================================================== */
-
-/* Tipografía Deportiva Atlética (Inspirada en el título 'PROTEÍNAS') */
 .font-athletic {
-  font-family: 'Chakra Petch', 'Michroma', 'Syne', sans-serif;
+  font-family: 'Chakra Petch', sans-serif;
   font-weight: 900;
   font-style: italic;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
-/* Título de Sección Estilo Catálogo Deportivo de catalogo_2 */
-.catalog-section-title {
-  font-family: 'Chakra Petch', 'Michroma', sans-serif;
-  font-weight: 900;
-  font-style: italic;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transform: skewX(-4deg);
-}
-
-/* Tipografía de Precios Altos Condensados (como en PRECIO: 400.000 COL$) */
 .font-price {
-  font-family: 'Barlow Condensed', 'Outfit', sans-serif;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.font-product-title {
+  font-family: 'Chakra Petch', sans-serif;
   font-weight: 800;
   letter-spacing: 0.01em;
 }
 
-/* Tipografía para Títulos de Productos */
-.font-product-title {
-  font-family: 'Chakra Petch', 'Outfit', sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-}
-
-/* Slogan Tracked 'DEFINE TU PROCESO' */
 .font-tagline-tracked {
   font-family: 'Outfit', sans-serif;
-  font-weight: 800;
-  letter-spacing: 0.25em;
+  font-weight: 900;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
 }
 
 /* ==========================================================================
-   EFECTOS VISUALES & BRANDING
+   LOGOTIPO OFICIAL DEL HEADER (SIN CAJA NI BORDES - ADAPTATIVO DARK/LIGHT)
    ========================================================================== */
-
-/* Efectos de brillo de Neón IPROFIT */
-.text-glow-cyan {
-  text-shadow: 0 0 15px rgba(0, 240, 255, 0.6), 0 0 30px rgba(0, 240, 255, 0.2);
+.brand-header-link {
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.brand-header-link:hover {
+  opacity: 0.9;
+  transform: translateY(-0.5px);
+}
+.brand-header-link:active {
+  transform: scale(0.97);
 }
 
-.box-glow-cyan {
-  box-shadow: 0 0 25px rgba(0, 240, 255, 0.25);
+html.dark .header-logo-dark {
+  display: block;
+}
+html.dark .header-logo-light {
+  display: none;
 }
 
-.box-glow-cyan-hover:hover {
-  box-shadow: 0 10px 30px rgba(0, 240, 255, 0.35);
-  border-color: rgba(0, 240, 255, 0.6);
+html.light .header-logo-dark {
+  display: none;
+}
+html.light .header-logo-light {
+  display: block;
 }
 
-.light .box-glow-cyan {
-  box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.15), 0 8px 10px -6px rgba(2, 132, 199, 0.05);
-}
-
-/* Acentos de producto inspirados en catalogo_2 */
-.theme-amber {
-  --product-accent: #f59e0b;
-  --product-accent-glow: rgba(245, 158, 11, 0.25);
-  --product-accent-bg: rgba(245, 158, 11, 0.1);
-}
-
-.theme-red {
-  --product-accent: #ef4444;
-  --product-accent-glow: rgba(239, 68, 68, 0.25);
-  --product-accent-bg: rgba(239, 68, 68, 0.1);
-}
-
-.theme-cyan {
-  --product-accent: #00f0ff;
-  --product-accent-glow: rgba(0, 240, 255, 0.25);
-  --product-accent-bg: rgba(0, 240, 255, 0.1);
-}
-
-/* Gradientes de Marca */
-.bg-gradient-brand {
-  background: linear-gradient(135deg, #00f0ff 0%, #0284c7 100%);
-}
-
-.text-gradient-cyan {
-  background: linear-gradient(90deg, #0284c7 0%, #00b4d8 50%, #0077b6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.dark .text-gradient-cyan {
-  background: linear-gradient(90deg, #ffffff 0%, #00f0ff 50%, #38bdf8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-silver {
-  background: linear-gradient(180deg, #1e293b 0%, #475569 50%, #64748b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.dark .text-gradient-silver {
-  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Tarjetas Glassmorphism */
-.glass-panel {
-  background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-subtle);
-  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.glass-nav {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.dark .glass-nav {
-  background: rgba(7, 9, 14, 0.9);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* Barra de navegación inferior para celular */
-.mobile-bottom-bar {
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  padding-bottom: env(safe-area-inset-bottom, 8px);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.dark .mobile-bottom-bar {
-  background: rgba(10, 14, 23, 0.96);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Glow de fondo decorativo */
-.ambient-glow {
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, rgba(0, 180, 216, 0.12) 0%, rgba(2, 132, 199, 0.04) 50%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-  filter: blur(50px);
-  z-index: 0;
-}
-
-.dark .ambient-glow {
-  background: radial-gradient(circle, rgba(0, 240, 255, 0.12) 0%, rgba(2, 132, 199, 0.05) 50%, transparent 70%);
-}
-
-/* Animaciones sutiles */
-@keyframes pulseGlow {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.05); }
-}
-
-.animate-glow-pulse {
-  animation: pulseGlow 4s infinite ease-in-out;
-}
-
-/* Micro-píldoras de características (como en catalogo_2) */
-.feature-badge-chip {
+/* ==========================================================================
+   BOTONES VECTORIALES DE CABECERA (SVG HD - CERO EMOJIS)
+   ========================================================================== */
+.header-action-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 8px;
+  justify-content: center;
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  color: var(--text-primary);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.header-action-btn:hover {
+  background: var(--btn-secondary-hover);
+  transform: translateY(-1px);
+}
+
+.header-action-btn:active {
+  transform: scale(0.92);
+}
+
+.header-whatsapp-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.28);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.header-whatsapp-btn:hover {
+  background: linear-gradient(135deg, #34d399 0%, #059669 100%);
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+  transform: translateY(-1px);
+}
+
+.header-whatsapp-btn:active {
+  transform: scale(0.92);
+}
+
+/* Animación sutil al alternar tema */
+.animate-spin-once {
+  animation: spinOnce 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes spinOnce {
+  from { transform: rotate(-45deg) scale(0.85); opacity: 0.6; }
+  to { transform: rotate(0deg) scale(1); opacity: 1; }
+}
+
+/* ==========================================================================
+   CINTAS MOTIVACIONALES (SLANTED BANNERS - ESTILO 'CLIENTES')
+   ========================================================================== */
+.shape-motto-banner {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  transform: skewX(-12deg);
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 6px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+.shape-motto-banner > * {
+  transform: skewX(12deg);
+}
+
+.theme-cyan .shape-motto-banner {
+  background: linear-gradient(135deg, #00f0ff 0%, #0284c7 100%);
+  color: #030407;
+  box-shadow: 0 4px 16px rgba(0, 240, 255, 0.35);
+}
+html.light .theme-cyan .shape-motto-banner {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.28);
+}
+
+.theme-amber .shape-motto-banner {
+  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+  color: #030407;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
+}
+
+.theme-red .shape-motto-banner {
+  background: linear-gradient(135deg, #f87171 0%, #dc2626 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.4);
+}
+
+.theme-lime .shape-motto-banner {
+  background: linear-gradient(135deg, #4ade80 0%, #16a34a 100%);
+  color: #030407;
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.35);
+}
+html.light .theme-lime .shape-motto-banner {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  color: #ffffff;
+}
+
+/* Patrón de líneas diagonales deportivas (///) */
+.stripe-speed-pattern {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--speed-line-color),
+    var(--speed-line-color) 4px,
+    transparent 4px,
+    transparent 11px
+  );
+}
+
+/* Halos y Luces Radiales Detrás de los Stickers */
+.radial-halo-cyan {
+  background: radial-gradient(circle at center, rgba(0, 240, 255, 0.24) 0%, rgba(2, 132, 199, 0.08) 45%, transparent 72%);
+}
+html.light .radial-halo-cyan {
+  background: radial-gradient(circle at center, rgba(2, 132, 199, 0.16) 0%, transparent 68%);
+}
+
+.radial-halo-amber {
+  background: radial-gradient(circle at center, rgba(245, 158, 11, 0.25) 0%, rgba(217, 119, 6, 0.08) 45%, transparent 72%);
+}
+html.light .radial-halo-amber {
+  background: radial-gradient(circle at center, rgba(217, 119, 6, 0.16) 0%, transparent 68%);
+}
+
+.radial-halo-red {
+  background: radial-gradient(circle at center, rgba(239, 68, 68, 0.26) 0%, rgba(185, 28, 28, 0.08) 45%, transparent 72%);
+}
+html.light .radial-halo-red {
+  background: radial-gradient(circle at center, rgba(220, 38, 38, 0.16) 0%, transparent 68%);
+}
+
+.radial-halo-lime {
+  background: radial-gradient(circle at center, rgba(34, 197, 94, 0.25) 0%, rgba(22, 163, 74, 0.08) 45%, transparent 72%);
+}
+html.light .radial-halo-lime {
+  background: radial-gradient(circle at center, rgba(22, 163, 74, 0.16) 0%, transparent 68%);
+}
+
+/* ==========================================================================
+   TARJETA DE PRODUCTO MÓVIL (SIN TRASLAPES & ADAPTATIVA)
+   ========================================================================== */
+.mobile-product-card {
+  position: relative;
+  background: var(--app-card-bg);
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid var(--border-card);
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+/* Sombras y bordes en Dark Mode */
+html.dark .theme-cyan.mobile-product-card {
+  border-color: rgba(0, 240, 255, 0.22);
+  box-shadow: 0 12px 30px rgba(0, 240, 255, 0.06);
+}
+html.dark .theme-amber.mobile-product-card {
+  border-color: rgba(245, 158, 11, 0.22);
+  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.06);
+}
+html.dark .theme-red.mobile-product-card {
+  border-color: rgba(239, 68, 68, 0.22);
+  box-shadow: 0 12px 30px rgba(239, 68, 68, 0.06);
+}
+html.dark .theme-lime.mobile-product-card {
+  border-color: rgba(34, 197, 94, 0.22);
+  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.06);
+}
+
+/* Sombras y bordes en Light Mode */
+html.light .mobile-product-card {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+html.light .theme-cyan.mobile-product-card {
+  border-color: rgba(2, 132, 199, 0.22);
+  box-shadow: 0 10px 26px rgba(2, 132, 199, 0.07);
+}
+html.light .theme-amber.mobile-product-card {
+  border-color: rgba(217, 119, 6, 0.22);
+  box-shadow: 0 10px 26px rgba(217, 119, 6, 0.07);
+}
+html.light .theme-red.mobile-product-card {
+  border-color: rgba(220, 38, 38, 0.22);
+  box-shadow: 0 10px 26px rgba(220, 38, 38, 0.07);
+}
+html.light .theme-lime.mobile-product-card {
+  border-color: rgba(22, 163, 74, 0.22);
+  box-shadow: 0 10px 26px rgba(22, 163, 74, 0.07);
+}
+
+/* ==========================================================================
+   STAGE DEL STICKER: PURE DIE-CUT STICKER LOOK (IGUAL A 'CLIENTES')
+   ========================================================================== */
+.product-sticker-stage {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+  max-height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px;
+  overflow: hidden;
+  background-color: var(--stage-bg);
+  transition: background-color 0.25s ease;
+}
+
+/* EFECTO STICKER DIE-CUT:
+   Contorno blanco nítido + sombra 3D proyectada detrás */
+.product-sticker {
+  max-height: 230px;
+  max-width: 85%;
+  object-fit: contain;
+  filter: 
+    drop-shadow(0 0 1.5px rgba(255, 255, 255, 0.95))
+    drop-shadow(0 0 2px rgba(255, 255, 255, 0.8))
+    drop-shadow(0 15px 24px rgba(0, 0, 0, 0.95))
+    drop-shadow(0 4px 6px rgba(0, 0, 0, 0.7));
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+  will-change: transform, filter;
+  cursor: pointer;
+}
+
+html.light .product-sticker {
+  filter: 
+    drop-shadow(0 0 1.5px rgba(0, 0, 0, 0.16))
+    drop-shadow(0 0 2.5px rgba(255, 255, 255, 1))
+    drop-shadow(0 12px 20px rgba(0, 0, 0, 0.22))
+    drop-shadow(0 3px 6px rgba(0, 0, 0, 0.12));
+}
+
+.mobile-product-card:hover .product-sticker,
+.mobile-product-card:active .product-sticker {
+  transform: scale(1.05) translateY(-4px) rotate(-1.5deg);
+}
+
+html.dark .theme-cyan:hover .product-sticker {
+  filter: 
+    drop-shadow(0 0 2.5px #ffffff)
+    drop-shadow(0 0 8px rgba(0, 240, 255, 0.6))
+    drop-shadow(0 20px 30px rgba(0, 0, 0, 0.95));
+}
+html.dark .theme-amber:hover .product-sticker {
+  filter: 
+    drop-shadow(0 0 2.5px #ffffff)
+    drop-shadow(0 0 8px rgba(245, 158, 11, 0.6))
+    drop-shadow(0 20px 30px rgba(0, 0, 0, 0.95));
+}
+html.dark .theme-red:hover .product-sticker {
+  filter: 
+    drop-shadow(0 0 2.5px #ffffff)
+    drop-shadow(0 0 8px rgba(239, 68, 68, 0.6))
+    drop-shadow(0 20px 30px rgba(0, 0, 0, 0.95));
+}
+html.dark .theme-lime:hover .product-sticker {
+  filter: 
+    drop-shadow(0 0 2.5px #ffffff)
+    drop-shadow(0 0 8px rgba(34, 197, 94, 0.6))
+    drop-shadow(0 20px 30px rgba(0, 0, 0, 0.95));
+}
+
+html.light .theme-cyan:hover .product-sticker {
+  filter: 
+    drop-shadow(0 0 2px rgba(0, 0, 0, 0.2))
+    drop-shadow(0 0 7px rgba(2, 132, 199, 0.45))
+    drop-shadow(0 16px 24px rgba(0, 0, 0, 0.25));
+}
+html.light .theme-amber:hover .product-sticker {
+  filter: 
+    drop-shadow(0 0 2px rgba(0, 0, 0, 0.2))
+    drop-shadow(0 0 7px rgba(217, 119, 6, 0.45))
+    drop-shadow(0 16px 24px rgba(0, 0, 0, 0.25));
+}
+html.light .theme-red:hover .product-sticker {
+  filter: 
+    drop-shadow(0 0 2px rgba(0, 0, 0, 0.2))
+    drop-shadow(0 0 7px rgba(220, 38, 38, 0.45))
+    drop-shadow(0 16px 24px rgba(0, 0, 0, 0.25));
+}
+html.light .theme-lime:hover .product-sticker {
+  filter: 
+    drop-shadow(0 0 2px rgba(0, 0, 0, 0.2))
+    drop-shadow(0 0 7px rgba(22, 163, 74, 0.45))
+    drop-shadow(0 16px 24px rgba(0, 0, 0, 0.25));
+}
+
+/* Botón Zoom HD */
+.btn-zoom-hd {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 10px;
+  font-weight: 700;
+  border: 1px solid var(--border-subtle);
+  background: var(--btn-secondary-bg);
+  color: var(--text-primary);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.btn-zoom-hd:hover {
+  background: var(--cyan-neon);
+  color: #ffffff;
+  border-color: var(--cyan-neon);
+}
+html.dark .btn-zoom-hd:hover {
+  color: #030407;
+}
+
+/* ==========================================================================
+   PARTES INTERNAS DE LA TARJETA (CABECERA, CUERPO, PIE)
+   ========================================================================== */
+.card-header-bar {
+  background: var(--card-header-bg);
+  border-color: var(--border-subtle);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.card-badge-pill {
+  background: var(--btn-secondary-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+.card-info-content {
+  background: var(--card-body-bg);
+  border-top: 1px solid var(--border-subtle);
+  transition: background-color 0.25s ease;
+}
+
+.product-title {
+  color: var(--text-primary);
+}
+
+.product-desc {
+  color: var(--text-secondary);
+}
+
+.metadata-weight-pill {
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  color: var(--text-secondary);
+}
+
+.metadata-servings-badge {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981;
+}
+
+.flavor-badge {
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  color: var(--text-primary);
+}
+
+/* Píldoras de Especificaciones Nutricionales */
+.spec-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  background: var(--spec-pill-bg);
+  border: 1px solid var(--spec-pill-border);
   border-radius: 8px;
   font-size: 11px;
   font-weight: 700;
-  background: rgba(241, 245, 249, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  color: #334155;
-  transition: all 0.2s ease;
-  font-family: 'Outfit', sans-serif;
+  color: var(--spec-pill-text);
+  transition: background-color 0.25s ease;
 }
 
-.dark .feature-badge-chip {
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #e2e8f0;
+/* Acordeón de Instrucciones */
+.product-accordion {
+  background: var(--accordion-bg);
+  border-color: var(--border-subtle);
+  color: var(--text-secondary);
 }
 
-.feature-badge-chip:hover {
-  border-color: var(--accent-cyan);
+.product-accordion summary {
+  color: var(--text-primary);
 }
 
-/* Tarjeta de Producto */
-.product-card {
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+.accordion-body {
+  background: var(--accordion-inner-bg);
+  border-color: var(--border-subtle);
+  color: var(--text-secondary);
 }
 
-@media (hover: hover) {
-  .product-card:hover {
-    transform: translateY(-5px);
-  }
+/* Bloque Inferior de Precio */
+.card-footer-actions {
+  border-color: var(--border-subtle);
 }
 
-.product-img-wrapper {
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+.price-label {
+  color: var(--text-muted);
 }
 
-.product-card:hover .product-img-wrapper {
-  transform: scale(1.05);
+.price-amount {
+  color: var(--text-primary);
 }
 
-/* Scrollbar en móvil invisible para las categorías */
+.price-currency {
+  color: var(--cyan-neon);
+}
+
+.price-original {
+  color: var(--text-muted);
+}
+
+/* Botón Agregar a Cotización (+) */
+.btn-add-quote {
+  width: 42px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+.btn-add-quote:hover {
+  background: var(--btn-secondary-hover);
+  transform: translateY(-1px);
+}
+.btn-add-quote:active {
+  transform: scale(0.92);
+}
+
+/* Colores de marca dinámicos por tema */
+.text-theme-accent-cyan {
+  color: #00f0ff;
+}
+html.light .text-theme-accent-cyan {
+  color: #0284c7;
+}
+
+.text-theme-accent-amber {
+  color: #fbbf24;
+}
+html.light .text-theme-accent-amber {
+  color: #d97706;
+}
+
+.text-theme-accent-red {
+  color: #f87171;
+}
+html.light .text-theme-accent-red {
+  color: #dc2626;
+}
+
+.text-theme-accent-lime {
+  color: #4ade80;
+}
+html.light .text-theme-accent-lime {
+  color: #16a34a;
+}
+
+/* ==========================================================================
+   NAVBAR SUPERIOR FLOTANTE
+   ========================================================================== */
+.floating-top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--bar-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
@@ -291,57 +697,147 @@ body {
   scrollbar-width: none;
 }
 
-/* Scrollbar personalizado para desktop */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--bg-main);
-}
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
-}
-.dark ::-webkit-scrollbar-thumb {
-  background: #1e293b;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #00f0ff;
-}
-
-/* Modal en Móvil: Bottom Sheet */
-@media (max-width: 640px) {
-  .modal-sheet {
-    align-self: flex-end;
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-    max-height: 88vh;
-    animation: sheetSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  }
+/* ==========================================================================
+   DOCK INFERIOR FIJO PARA PULGAR
+   ========================================================================== */
+.floating-bottom-dock {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  z-index: 45;
+  background: var(--dock-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-top: 1px solid var(--border-subtle);
+  padding: 10px 16px;
+  padding-bottom: max(10px, env(safe-area-inset-bottom));
+  transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
-@keyframes sheetSlideUp {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
+.btn-dock-support {
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+.btn-dock-support:hover {
+  background: var(--btn-secondary-hover);
+}
+.btn-dock-support:active {
+  transform: scale(0.97);
 }
 
-/* Animación de Toast de Notificación */
-.toast-slide-in {
-  animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.btn-dock-cart {
+  background: linear-gradient(135deg, #00f0ff 0%, #0284c7 100%);
+  color: #030407;
+  box-shadow: 0 4px 18px rgba(0, 240, 255, 0.35);
+  cursor: pointer;
+}
+html.light .btn-dock-cart {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(2, 132, 199, 0.35);
+}
+.btn-dock-cart:active {
+  transform: scale(0.96);
 }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+/* ==========================================================================
+   BOTÓN WHATSAPP NEÓN 1-TAP
+   ========================================================================== */
+.btn-whatsapp-action {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #ffffff;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+  transition: transform 0.15s ease, filter 0.15s ease;
+  text-decoration: none;
+}
+
+.btn-whatsapp-action:active {
+  transform: scale(0.97);
+  filter: brightness(0.9);
+}
+
+/* ==========================================================================
+   DRAWER INFERIOR Y CARRITO
+   ========================================================================== */
+#cart-drawer {
+  background: var(--drawer-bg);
+  border-color: var(--border-subtle);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease;
+}
+
+.cart-item-card {
+  background: var(--card-header-bg);
+  border-color: var(--border-subtle);
+}
+
+.cart-qty-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  color: var(--text-primary);
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.cart-qty-btn:hover {
+  background: var(--btn-secondary-hover);
+}
+
+.cart-remove-btn {
+  color: var(--text-muted);
+  padding: 8px;
+  border-radius: 8px;
+  transition: color 0.15s, background 0.15s;
+  cursor: pointer;
+}
+.cart-remove-btn:hover {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+/* ==========================================================================
+   LIGHTBOX FULLSCREEN DE IMÁGENES
+   ========================================================================== */
+#image-lightbox {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#lightbox-img {
+  animation: scaleUp 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.92); }
+  to { transform: scale(1); }
+}
+
+/* Toast flotante */
+.toast-slide-up {
+  animation: slideToast 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideToast {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
