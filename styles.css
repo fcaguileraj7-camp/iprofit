@@ -169,15 +169,24 @@ html, body {
 
 .header-logo-dark,
 .header-logo-light {
-  height: 28px;
+  height: 25px;
+  max-height: 25px;
   width: auto;
   object-fit: contain;
   transition: transform 0.2s ease;
+}
+@media (min-width: 390px) {
+  .header-logo-dark,
+  .header-logo-light {
+    height: 28px;
+    max-height: 28px;
+  }
 }
 @media (min-width: 480px) {
   .header-logo-dark,
   .header-logo-light {
     height: 32px;
+    max-height: 32px;
   }
 }
 
@@ -199,9 +208,9 @@ html.light .header-logo-light {
    BOTONES VECTORIALES DE CABECERA (SVG HD - CERO EMOJIS)
    ========================================================================== */
 .header-action-btn {
-  width: 32px;
-  height: 32px;
-  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -211,6 +220,13 @@ html.light .header-logo-light {
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   flex-shrink: 0;
   cursor: pointer;
+}
+@media (min-width: 390px) {
+  .header-action-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+  }
 }
 
 .header-action-btn:hover {

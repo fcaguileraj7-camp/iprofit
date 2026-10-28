@@ -51,30 +51,36 @@
   <div id="mobile-app-shell">
 
     <!-- BARRA SUPERIOR FIJA (APP HEADER) -->
-    <header class="floating-top-bar px-3.5 py-2.5 sm:px-4 sm:py-3">
+    <header class="floating-top-bar px-2.5 py-2 sm:px-4 sm:py-2.5">
       
       <!-- Fila 1: Logo, Estado y Accesos -->
-      <div class="flex items-center justify-between gap-1.5">
+      <div class="flex items-center justify-between gap-1">
         
-        <!-- Logo Oficial IPROFIT (Integrado directamente como Header, sin caja ni bordes) -->
+        <!-- Logo Oficial IPROFIT + Badge Ubicación Stacked (Cero Traslapes en móviles) -->
         <a href="#" class="brand-header-link flex items-center gap-1.5 min-w-0" aria-label="IPROFIT - DEFINE TU PROCESO">
           <img 
             src="images/logo_iprofit_transparent.png" 
             alt="IPROFIT - DEFINE TU PROCESO" 
-            class="header-logo-dark h-7 sm:h-8 w-auto object-contain"
+            class="header-logo-dark h-[25px] min-[390px]:h-[28px] sm:h-[32px] w-auto object-contain flex-shrink-0"
           />
           <img 
             src="images/logo_iprofit_light_mode.png" 
             alt="IPROFIT - DEFINE TU PROCESO" 
-            class="header-logo-light h-7 sm:h-8 w-auto object-contain hidden"
+            class="header-logo-light h-[25px] min-[390px]:h-[28px] sm:h-[32px] w-auto object-contain hidden flex-shrink-0"
           />
-          <span class="text-[7.5px] sm:text-[8px] font-bold text-theme-accent-cyan flex items-center gap-1 whitespace-nowrap pl-1.5 border-l hidden min-[360px]:inline-flex" style="border-color: var(--border-subtle);">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span> San Gil / Santander
+          <span class="pl-1.5 border-l flex flex-col justify-center leading-none select-none flex-shrink-0" style="border-color: var(--border-subtle);">
+            <span class="flex items-center gap-1 text-[7px] min-[390px]:text-[7.5px] font-bold text-theme-accent-cyan tracking-wide">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
+              <span>San Gil</span>
+            </span>
+            <span class="text-[6px] min-[390px]:text-[6.5px] font-semibold text-slate-400 uppercase tracking-widest pl-2.5 mt-0.5">
+              Santander
+            </span>
           </span>
         </a>
 
         <!-- Botones de Acción Superiores en el orden solicitado: Lupa -> Claridad/Oscuridad -> Instagram -> WhatsApp -->
-        <div class="flex items-center gap-1 sm:gap-1.5 flex-shrink-0">
+        <div class="flex items-center gap-1 flex-shrink-0">
           
           <!-- 1. Lupa (Buscador) -->
           <button 
